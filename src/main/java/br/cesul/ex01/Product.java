@@ -3,8 +3,8 @@ package br.cesul.ex01;
 public abstract class Product {
 
     private final String name;
-    protected final Double price;
-    protected final Double quantity;
+    protected Double price;
+    protected Double quantity;
     protected final Double additionalTransport;
 
     public Product(String name, Double price, Double quantity, Double additionalTransport) {
