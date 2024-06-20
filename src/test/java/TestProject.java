@@ -8,6 +8,28 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestProject {
 
     @Test
+    @DisplayName("Testando construtor da classe IndustrializedProduct")
+    public void testConstructorIndustrializedProduct() {
+        var testConstructorIndustrialized = new IndustrializedProduct("Chapa", 25.0,3.0,0.35,1.12,1.5);
+        assertEquals("Chapa", testConstructorIndustrialized.getName());
+        assertEquals(25.0,testConstructorIndustrialized.getPrice());
+        assertEquals(3.0,testConstructorIndustrialized.getQuantity());
+        assertEquals(0.35, testConstructorIndustrialized.getAdditionalTransport());
+        assertEquals(1.12,testConstructorIndustrialized.getIcms());
+        assertEquals(1.5,testConstructorIndustrialized.getIpi());
+    }
+
+    @Test
+    @DisplayName("Testando construtor da classe AgriculturalProduct")
+    public void testConstructorAgriculturalProduct() {
+        var testConstructorAgricultural = new AgriculturalProduct("Laranja", 3.49,5.0,0.20);
+        assertEquals("Laranja", testConstructorAgricultural.getName());
+        assertEquals(3.49,testConstructorAgricultural.getPrice());
+        assertEquals(5.0,testConstructorAgricultural.getQuantity());
+        assertEquals(0.20, testConstructorAgricultural.getAdditionalTransport());
+    }
+
+    @Test
     @DisplayName("Teste para os produtos Industrializados com 25 de quantidade")
     public void TestIndustrializedProduct25() {
         var industrializedProduct25 = new IndustrializedProduct("Chapa", 25.0, 3d, 0.35, 1.12, 1.05);
